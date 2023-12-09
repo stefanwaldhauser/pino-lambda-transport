@@ -1,0 +1,51 @@
+{
+  "name": "library-name",
+  "version": "1.0.0",
+  "description": "library-description",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "clean-dist": "rimraf dist",
+    "clean-test": "rimraf .nyc_output",
+    "test": "npm run clean-test && cross-env TS_NODE_PROJECT='./tsconfig.test.json' nyc mocha",
+    "build": "npm run clean-dist && tsc",
+    "publish-lib": "npm run build && npm publish",
+    "publish-beta": "npm run build && npm publish --tag beta",
+    "publish-dryrun": "npm run build && npm publish --dry-run",
+    "lint": "eslint . --ext ts",
+    "lint:fix": "eslint --fix . --ext ts",
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "keywordA",
+    "keywordB"
+  ],
+  "author": "Author <author@example.com>",
+  "license": "SomeLicense",
+  "devDependencies": {
+    "@types/chai": "4.3.11",
+    "@types/mocha": "10.0.6",
+    "@typescript-eslint/eslint-plugin": "6.13.2",
+    "@typescript-eslint/parser": "6.13.2",
+    "chai": "4.3.10",
+    "cross-env": "7.0.3",
+    "eslint": "8.55.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-config-standard-with-typescript": "42.0.0",
+    "eslint-plugin-import": "2.29.0",
+    "eslint-plugin-n": "16.3.1",
+    "eslint-plugin-prettier": "5.0.1",
+    "eslint-plugin-promise": "6.1.1",
+    "mocha": "10.2.0",
+    "nyc": "15.1.0",
+    "prettier": "3.1.0",
+    "rimraf": "5.0.5",
+    "ts-node": "10.9.2",
+    "typescript": "5.3.3",
+    "husky": "8.0.0"
+  }
+}
