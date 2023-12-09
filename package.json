@@ -1,7 +1,7 @@
 {
-  "name": "library-name",
-  "version": "1.0.0",
-  "description": "library-description",
+  "name": "pino-lambda-transport",
+  "version": "0.0.1",
+  "description": "A pino V7+ transported based on 'pino-lambda'",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -21,11 +21,12 @@
     "prepare": "husky install"
   },
   "keywords": [
-    "keywordA",
-    "keywordB"
+    "pino",
+    "lambda",
+    "transport"
   ],
-  "author": "Author <author@example.com>",
-  "license": "SomeLicense",
+  "author": "Stefan Waldhauser <stefan.waldhauser@proton.me>",
+  "license": "MIT",
   "devDependencies": {
     "@types/chai": "4.3.11",
     "@types/mocha": "10.0.6",
@@ -40,12 +41,15 @@
     "eslint-plugin-n": "16.3.1",
     "eslint-plugin-prettier": "5.0.1",
     "eslint-plugin-promise": "6.1.1",
+    "husky": "8.0.0",
     "mocha": "10.2.0",
     "nyc": "15.1.0",
     "prettier": "3.1.0",
     "rimraf": "5.0.5",
     "ts-node": "10.9.2",
-    "typescript": "5.3.3",
-    "husky": "8.0.0"
+    "typescript": "5.3.3"
+  },
+  "dependencies": {
+    "pino-lambda": "4.4.0"
   }
 }
